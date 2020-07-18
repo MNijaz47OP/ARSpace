@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //Initialising the fragment
         arFragment = (ArFragment)getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
         setArrayView();
         setClickListner();
@@ -47,8 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Anchor anchor = hitResult.createAnchor();
                 AnchorNode anchorNode = new AnchorNode(anchor);
                 anchorNode.setParent(arFragment.getArSceneView().getScene());
-
-                createModel(anchorNode,selected);
+                createModel(anchorNode,selected);//
         });
 
     }
@@ -110,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 );
 
     }
-    //Creating the Render
+    //Creating the Render based on the selection
     private void createModel(AnchorNode anchorNode, int selected) {
         if(selected == 1){
             TransformableNode books = new TransformableNode(arFragment.getTransformationSystem());
@@ -150,13 +149,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
-
+    //Creating an ClickListner for the images
     private void setClickListner() {
         for(int i=0;i<arrayView.length;i++){
             arrayView[i].setOnClickListener(this);
         }
     }
-
+    //Adding models to the View Array for Comparison During Selection Of the Model to be rendered
     private void setArrayView()  {
         books = (ImageView)findViewById(R.id.books);
         chair = (ImageView)findViewById(R.id.chair);
@@ -168,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 books,chair,drawer,lamp,sofa,table
         };
     }
-
+    //Choosing the model to be Rendered
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.books)
