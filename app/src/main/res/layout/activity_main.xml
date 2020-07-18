@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:name="com.google.ar.sceneform.ux.ArFragment"
+        android:id="@+id/ux_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/sceneform_ux_fragment_layout" />
+    <HorizontalScrollView
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/books"
+                android:src="@drawable/books"
+                android:layout_width="125dp"
+                android:layout_height="150dp" />
+
+            <ImageView
+                android:id="@+id/chair"
+                android:layout_width="125dp"
+                android:layout_height="150dp"
+                android:src="@drawable/chair" />
+
+            <ImageView
+                android:id="@+id/drawer"
+                android:src="@drawable/drawer"
+                android:layout_width="125dp"
+                android:layout_height="150dp" />
+            <ImageView
+                android:id="@+id/lamp"
+                android:src="@drawable/lamp"
+                android:layout_width="125dp"
+                android:layout_height="150dp" />
+            <ImageView
+                android:id="@+id/sofa"
+                android:src="@drawable/sofa"
+                android:layout_width="125dp"
+                android:layout_height="150dp" />
+            <ImageView
+                android:id="@+id/table"
+                android:src="@drawable/table"
+                android:layout_width="125dp"
+                android:layout_height="150dp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+</FrameLayout>
