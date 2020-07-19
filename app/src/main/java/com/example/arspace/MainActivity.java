@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
     }
-    //Setting Up the Models For Rendering
+    //Creating renderable models
     private void setupModel() {
         ModelRenderable.builder()
                 .setSource(this,R.raw.books)
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 );
 
     }
-    //Creating the Render based on the selection
+    //Building the scene based on selection
     private void createModel(AnchorNode anchorNode, int selected) {
         if(selected == 1){
             TransformableNode books = new TransformableNode(arFragment.getTransformationSystem());
