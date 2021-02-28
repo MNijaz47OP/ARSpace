@@ -3,7 +3,7 @@ apply plugin: 'com.google.ar.sceneform.plugin'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "30.0.0"
+    buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "com.example.arspace"
         minSdkVersion 26
