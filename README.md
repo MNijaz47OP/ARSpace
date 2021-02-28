@@ -1,3 +1,4 @@
 # ARSpace
-- Collge Final Year Project
-- An AR based android application to showcase furnitures
+- An AR based Android application
+- Language - Java
+- Developed with Google ARCore and Sceneform sdk
