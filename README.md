@@ -1,4 +1,8 @@
 # ARSpace
 - An AR based Android application
-- Language - Java
-- Developed with Google ARCore and Sceneform sdk
+
+Dependencies
+- OpenJdk 1.8
+- Google Scenform Sdk 1.15.0
+- Android 10
+
